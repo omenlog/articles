@@ -221,7 +221,7 @@ function* genObjectKeys(obj) {
 
 const it = genObjectKeys({ foo: 1, baz: 2 });
 
-/* we can use our previous helper, this is the huge advantage of the protocols */
+/* we can use our previous helper, this is a huge advantage that protocols give us */
 
 consumeIterator(console.log, it);
 ```

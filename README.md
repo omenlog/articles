@@ -9,4 +9,4 @@ This repository is for store all my articles wich had been published in differen
 
 ## Tools
 
-- ### [Improve your commits using Visual Studio Code](https://github.com/omenlog/articles/blob/master/improving-your-commits-with-vscode/index.md)
+- ### [Improve your commits using Visual Studio Code](https://github.com/omenlog/articles/blob/master/improve-your-commits-with-vscode/index.md)

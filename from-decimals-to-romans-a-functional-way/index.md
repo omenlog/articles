@@ -275,4 +275,4 @@ Note how our `convert` function receive a number and in the first step(first fun
 As we stated at the beginning we used `function composition` and `pure functions` in the sense that none of our functions rely on side effects in every step we don't modify our `arg` instead we a create a new object, that will be passed to the next function in our chain.
 
 This example is simple but I hope that it give you some insights on how you can use this concepts in your every day tasks.
-This approach to build our `convert` function in a declarative way give us as advantage that is easier adapt to new requirements, for example our `convert` function can be refactored to work with numbers beyond to 5000 only adding **process(5000,<span style="text-decoration:overline;">V</span>)** without modify our inner `process` function.
+This approach to build our `convert` function in a declarative way give us as advantage that is easier adapt to new requirements, for example our `convert` function can be refactored to work with numbers greater than `5000` only adding another call without the need of modify our `process` function

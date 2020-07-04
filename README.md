@@ -9,7 +9,7 @@ This repository is for store all my articles wich had been published in differen
 
 ## Problems Solving
 
-- ### [Coverter from romans to decimals](https://github.com/omenlog/articles/blob/master/from-decimals-to-romans-a-functional-way/index.md)
+- ### [Coverter from decimals to romans](https://github.com/omenlog/articles/blob/master/from-decimals-to-romans-a-functional-way/index.md)
 
 ## Tools
 

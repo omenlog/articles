@@ -210,7 +210,6 @@ Now let's see the implementation, we know that during the conversion we did the 
 
 ```js
 function process(romanChar, decimal) {
-
   /* function to check if our romanChar will we in our final representation */
   return (arg) => {
     /*
@@ -234,9 +233,9 @@ function process(romanChar, decimal) {
 
     /* update num as rest and update our actual roman representation concatenating newChars */
     return {
-        num: rest,
-        roman: ${roman}${newChars}
-    }
+      num: rest,
+      roman: `${roman}${newRomanChars}`,
+    };
   };
 }
 ```
@@ -263,11 +262,13 @@ const convert = pipe(
   process(5, 'V'),
   process(4, 'IV'),
   process(1, 'I'),
-  ({ num, roman }) => roman
+  ({ roman }) => roman
 );
 ```
 
-> Note how our `convert` function receive a number and in the first step(first function) we transform it to our `arg` shape so we can start the conversion, also in the last step we get our `arg` object and extract from it `roman` property with the full conversion.
+Note how our `convert` function receive a number and in the first step(first function) we transform it to our `arg` shape so we can start the conversion, also in the last step we get our `arg` object and extract from it `roman` property with the full conversion.
+
+> Source code can be found [here](https://github.com/omenlog/articles/blob/master/from-decimals-to-romans-a-functional-way/index.js)
 
 # Conclusions
 

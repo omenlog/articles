@@ -41,119 +41,15 @@ we have the following set of characters:
 > As you see I represented some decimals using two letters example CD, this is in order to avoid in our algorithm the subtractions that
 > take place in the roman numeric system, think as this 2 characters as a whole that is associated with a decimal value
 
-The next step is for every decimal number try to decompose it as a sum using only the decimals number exposed previously, we should use the minimum number of operands in our sum let's see an example:
+The next step is for every decimal number try to decompose it as a sum, using only the decimals number exposed previously, we should use the minimum number of operands in our sum, let's see:
 
-```
-decomposed as a sum using the minimum number of operands and only decimal numbers from our previous table
-
-1679 = 1000 + 500 + 100 + 50 + 10 + 10 + 9
-1679 = M      D     C     L    X    X    IX
-
-final representation
-
-1679 = MDCLXXIX
-```
+![decomposition](images/decomposition-example.png)
 
 As we can see, from this decomposition is very straightforward get the roman representation. So this is how our algorithm work, it will go from top to bottom over our available decimals and check if the roman token associated with it should be in our final representation and how many times we should include the respective token.
 
 Our algorithm build the roman number in an incremental way, to check how many times a specific roman token should be present we use the `/` operator in conjunction with the decimal representation of this token against our input, the `%` operator is used in every step to get the remain that we will use as input when processing the next roman character, as we know an example is worth than thousand words so let see how we can transform `38`:
 
-```
-Processing X (decimal = 10) (Input = 38) (Roman = "")
-
-    - Find how many times we should include the X character
-
-      times = 38 / 10
-      times = 3
-
-      Our number has X 3 times
-
-    - Update Roman concatenating our new character
-
-      newRoman = roman + "XXX"
-      newRoman = XXX
-
-    - Find the input for the next step
-
-      nextInput = 38 % 10
-      nextInput = 8
-
-Processing IX (decimal = 9) (Input = 8) (Roman = "XXX")
-
-    - Find how many times we should include the IX character
-
-      times = 8 / 9
-      times = 0
-
-      Our number has IX 0 time -> NOT PRESENT
-
-    - Update Roman concatenating our new character
-
-      newRoman = roman + ""
-      newRoman = XXX
-
-    - Find the input for the next step
-
-      nextInput = 8 % 9
-      nextInput = 8
-
-Processing V (decimal = 5) (Input = 8) (Roman = "XXX")
-
-    - Find how many times we should include the V character
-
-      times = 8/5
-      times = 1
-
-      Our number has V 1 time
-
-    - Update Roman concatenating our new character
-
-      newRoman = roman + "V"
-      newRoman = XXXV
-
-    - Find the input for the next step
-
-      nextInput = 8 % 5
-      nextInput = 3
-
-Processing IV (decimal = 4) (Input = 3) (Roman = "XXXV")
-
-    - Find how many times we should include the IV character
-
-      times = 3 / 4
-      times = 0
-
-      Our number has IV 0 time -> NOT PRESENT
-
-    - Update Roman concatenating our new character
-
-      newRoman = roman + ""
-      newRoman = XXXV
-
-    - Find the input for the next step
-
-      nextInput = 3 % 4
-      nextInput = 3
-
-Processing I (decimal = 1) (Input = 3) (Roman = "XXXV")
-
-    - Find how many times we should include the I character
-
-      times = 3 / 1
-      times = 3
-
-      Our number has I 3 times
-
-    - Update Roman concatenating our new character
-
-      newRoman = roman + "III"
-      newRoman = XXXVIII
-
-    - Find the input for the next step
-
-      nextInput = 3 % 1
-      nextInput = 0
-```
+![conversion](images/conversion.png)
 
 After this steps we end and Roman = XXXVIII has our input represented as a roman number
 

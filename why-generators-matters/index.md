@@ -1,4 +1,4 @@
-# Do you know the most powerful feature of JavasScript generators ?
+# Why generators matters
 
 In a previous [article](https://dev.to/omenlog/why-we-have-generators-3bg6) I described the concept of generator in JS, there was explained the strong relation that exists between **Iterators**, **Iterables** and **Generators**.
 Now in this post I want to focus on one specific feature that make generators unique inside of JS landscape, this is:

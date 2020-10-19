@@ -14,4 +14,5 @@ This repository is for store all my articles which had been published in differe
 
 ## Tools
 
+- ### [Introducing genix](https://github.com/omenlog/articles/blob/master/introducing-genix/index.md)
 - ### [Improve your commits using Visual Studio Code](https://github.com/omenlog/articles/blob/master/improve-your-commits-with-vscode/index.md)
